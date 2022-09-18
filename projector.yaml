@@ -17,6 +17,9 @@ uart:
   tx_pin: GPIO1
   rx_pin: GPIO3
   baud_rate: 9600
+  # uncomment the following lines to receive verbose debug information via the
+  # ESPHome LOGS function of ESPHome Dashboard
+  # helpful for adapting to other projectors/devices
   # debug:
   #   direction: BOTH
   #   dummy_receiver: false
@@ -36,8 +39,6 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    # ssid: "Lr Tupplur Fallback Hotspot"
-    # ssid: "Br Tupplur Fallback Hotspot"
     ssid: "Epson Control Fallback Hotspot"
     password: "1234567890123"
 
@@ -54,7 +55,7 @@ text_sensor:
     id: "uart_readline"
 
 binary_sensor:
-  # A "connected?" status sensor that - as long as sensor + mqtt + HA are working -
+  # A "connected?" status sensor that - as long as sensor + HA are working -
   #   will always display "true". Allows for easy detection of sensor failure from HA
   # See: https://esphome.io/components/binary_sensor/status.html
   - platform: status
@@ -85,6 +86,11 @@ interval:
 # remote (IR) and Serial commands until the power is reset.
 # setting this for 20s reduces the chance of overlapping commands being sent
 # when sennding power on/ off commands from home assistant.
+
+# 10 seconds works fine with my EPSON projeector.
+# the 1s delay after the command is to make sure the projector has time
+# to send the colon character - not sure if needed, but it works
+# so it's here to stay
   - interval: 10s
     then:
       - uart.write: [0x50, 0x57, 0x52, 0x3F, 0x0D] # PWR?\r
