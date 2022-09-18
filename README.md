@@ -10,7 +10,7 @@ This project uses an ESP8266 to provide a serial to MQTT gateway and associated 
 This project assumes you have installed the following;
 
 - Home Assistant (tested on Home Assistant OS version, on a RPi4)
-- MQTT broker (I use mosquitto)
+- MQTT broker (I use mosquitto) (actually I believe this is optional when using the integrated ESPHome API)
 - ESPHome, used to configure the ESP8266, and for Over The Air (OTA) updates to the code.
 
 ## Bill of materials

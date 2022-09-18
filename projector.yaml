@@ -43,13 +43,6 @@ wifi:
 
 captive_portal:
 
-# update below with your MQTT broker and credentials...
-mqtt:
-  broker: <Your MQTT broker IP>
-  username: !secret mqtt_username
-  password: !secret mqtt_password  
-  topic_prefix: projector
-
 text_sensor:
 # This sets up the custom sensor to read UART (required for switch status)
 - platform: custom
