@@ -18,6 +18,7 @@ class UartReadLineSensor : public Component, public UARTDevice, public TextSenso
         case '\n': // Ignore new-lines
           break;
         case '\r': // Return on CR
+        case ':': // Return on Colon
           rpos = pos;
           pos = 0;  // Reset position index ready for next time
           return rpos;

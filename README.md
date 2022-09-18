@@ -1,6 +1,11 @@
-# ESPHome-Optoma-Projector-Serial-To-MQTT-bridge
+# ESPHome-Epson-Projector-Serial-To-MQTT-bridge
 
-This project uses an ESP32 to provide a serial to MQTT gateway and associated configuration for Home Assistant control and automation of an Optoma projector.
+(forked from ESPHome-Optoma-Projector-Serial-To-MQTT-bridge)
+I adapted this repo for use with an ESP8266 connected to an EPSON projector. Thanks very much rasclatt-dot-com for your great work!
+
+This project uses an ESP8266 to provide a serial to MQTT gateway and associated configuration for Home Assistant control and automation of an Epson projector.
+
+The rest of this README is unchanged (for now).
 
 # Tested and eliminated options
 
