@@ -26,7 +26,7 @@ You will need the following components;
   title="RS232 TTL MAX232 convertor"
   style="display: inline-block; margin: 0 auto; width: 250px">
   
-A full blown implimentation of RS232 is not required for this to work, the Max232 (TTL) adaptor converts TX and RX (at a sutiable voltage to not fry the ESP!).
+A full blown implimentation of RS232 is not required for this to work, the Max232 (TTL) adaptor converts TX and RX (at a suitable voltage to not fry the ESP!).
 
 ## Cabling
 
