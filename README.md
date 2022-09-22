@@ -9,8 +9,8 @@ This project uses an ESP8266 to provide a serial to MQTT gateway and associated 
 
 This project assumes you have installed the following;
 
-- Home Assistant (tested on Home Assistant OS version, on a RPi4)
-- MQTT broker (I use mosquitto) (actually I believe this is optional when using the integrated ESPHome API)
+- Home Assistant (tested on Home Assistant OS version and Docker container, on a RPi4)
+- MQTT broker AND/OR ESPHome HA integration
 - ESPHome, used to configure the ESP8266, and for Over The Air (OTA) updates to the code.
 
 ## Bill of materials
@@ -51,7 +51,7 @@ The Uart Read Line Sensor library included in this fork is modified to work with
 
 Before the ESPHome will compile and upload this file needs to be copied to the ESPHome directory on your Home Assistant server that contains youe ESP configurations, (default is usually /config/esphome/), make sure that the "include: uart_read_line_sensor.h" line has been copied to your ESPHome configuration.
 
-Once you are happy run the OTA process, once sucessful your device should de automatically detected by MQTT, (see below);
+Once you are happy run the OTA process, once successful your device should de automatically detected by ESPHome / MQTT, (see below);
 
 <img
   src="https://github.com/rasclatt-dot-com/ESPHome-Optoma-Projector-Serial-To-MQTT-bridge/blob/80feb1aeed47a8416ac781a16ca254c6eb693d56/assets/MQTT%20view.png"
