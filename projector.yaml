@@ -68,7 +68,7 @@ switch:
 # the lamda reads the status response defined in the interval below;
 # and is used to feed back the state of the switch to Home assistant
     lambda: |-
-      if (id(uart_readline).state == "PWR=01") {
+      if (id(uart_readline).state == "PWR=01" || id(uart_readline).state == "PWR=02" || id(uart_readline).state == "PWR=03") {
         return true;
       } else if(id(uart_readline).state == "PWR=00") {
         return false;
